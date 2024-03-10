@@ -1,1 +1,14 @@
-#test
+kind: pipeline
+type: docker
+name: default
+platform:
+  os: linux
+  arch: arm64
+steps:
+- name: test
+  pull: if-not-exists
+  image: alpine
+  
+  commands:
+  - echo hello432
+  - echo world432
